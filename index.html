@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Button</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #clickButton {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #clickButton:hover {
+            background-color: #c82333;
+        }
+
+        #catImage {
+            display: none;
+            margin-top: 20px;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #catImage.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button id="clickButton">Click me</button>
+    <img id="catImage" src="https://cataas.com/cat" alt="A cute cat">
+
+    <script>
+        const button = document.getElementById('clickButton');
+        const catImage = document.getElementById('catImage');
+
+        button.addEventListener('click', function() {
+            catImage.classList.add('show');
+        });
+    </script>
+</body>
+</html>
